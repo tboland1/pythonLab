@@ -20,9 +20,7 @@ on your unix/linus system is:
 USE:
 Then by adding the below line to the top of a script, all modules in the 
 my_modules directory become accessible.
-import add_modules_to_syspath
-Then, for a module pytry.py in wills_modules, use this:
-import pytry as pt
+import add_my_unix_modules
 References:
 1. http://stackoverflow.com/questions/20843088/where-to-save-my-custom-scripts-
 so-that-my-python-scripts-can-access-the-module
@@ -30,8 +28,7 @@ so-that-my-python-scripts-can-access-the-module
 '''
 
 import sys
-# sys.path.append( "/home/tboland1/
+# sys.path.append( "/home/tboland1/")
 
-# research_PhD/code/github/python/wills_modules" )
-sys.path.append( "C:\\Users\\willb\\Dropbox\\WillB\\Crozier_Lab\\"
-	"research_PhD\\code\\github\\python\\wills_modules" )
+# path/to/github/code/module/path" )
+sys.path.append( "/path/to/files/" )
