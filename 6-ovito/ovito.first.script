@@ -1,0 +1,17 @@
+from ovito.data import *
+
+def modify(frame, input, output):
+	fcc_count = input.attributes['PolyhedralTemplateMatching.counts.FCC']
+	bcc_count = input.attributes['PolyhedralTemplateMatching.counts.BCC']
+	timestep = input.attributes['Timestep']
+	
+	with open('/home/tboland1/ovito.file.dat','a+') as f:
+		f.write('{}\t{}\t{}\n'.format(timestep,fcc_count/input.number_of_particles,bcc_count/input.number_of_particles))
+	print("The input contains %i particles." % input.number_of_particles)
+	print(input.particle_properties.keys())
+	print(output.particle_properties['Position'].marray[0])
+	print(input.attributes.keys())
+	print(input.attributes['Timestep'])
+	
+	
+	
